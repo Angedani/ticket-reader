@@ -81,7 +81,7 @@ async def guardar(update: Update, context: ContextTypes.DEFAULT_TYPE):
     wb.save(archivo)
     await update.message.reply_text("Guardado")
 
-application = ApplicationBuilder().token("8241080399:AAGye9fQ4OTaUP9Y2TiBUz1uF7jueeZuAmA").build()
+application = ApplicationBuilder().token("token").build()
 application.add_handler(CommandHandler("start", say_hello))
 application.add_handler(MessageHandler(filters.PHOTO, ticket))
 application.add_handler(CommandHandler("editar", editar))
